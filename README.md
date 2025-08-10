@@ -1,13 +1,25 @@
-Sentinel‑C — Fast PII Detection & Redaction (Framework‑C + FastAPI)
-Sentinel‑C is a local, CPU‑only sidecar that detects PII and optionally redacts it.
-Under the hood it uses Framework‑C (a tiny C MLP) plus lightweight detectors, and can compare its per‑input inference latency and outputs against PyTorch and scikit‑learn.
-What you get
-Hybrid gate: regex/validators (email/phone/credit‑card/IBAN/JWT/API key) + MLP risk scorer
-Very low latency: sub‑ms model calls on commodity CPUs
-Per‑input comparison: Framework‑C vs PyTorch vs scikit‑learn (latency + probabilities)
-Dark UI: paste text, see redactions, confidence, spans, and model comparisons
-Simple API: /v1/gate (single), /v1/gate/batch (batched)
-Repo layout
+# Sentinel-C — Fast PII Detection & Redaction (Framework-C + FastAPI)
+
+![Sentinel-C UI Screenshot](docs/sentinel_c_ui.png)
+
+Sentinel-C is a **local, CPU-only** sidecar that detects PII and optionally redacts it.  
+Under the hood it uses **Framework-C** (a tiny C MLP) plus lightweight detectors, and can **compare** its per-input inference latency and outputs against **PyTorch** and **scikit-learn**.
+
+---
+
+## What you get
+
+- **Hybrid gate:** regex/validators (email/phone/credit-card/IBAN/JWT/API key) + MLP risk scorer  
+- **Very low latency:** sub-ms model calls on commodity CPUs  
+- **Per-input comparison:** Framework-C vs PyTorch vs scikit-learn (latency + probabilities)  
+- **Dark UI:** paste text, see redactions, confidence, spans, and model comparisons  
+- **Simple API:** `/v1/gate` (single), `/v1/gate/batch` (batched)  
+
+---
+
+## Repo layout
+
+
 .
 ├─ server.py        # FastAPI server + Dark UI (with per-model comparison)
 ├─ helpers.py       # Detectors, featurizer, synthetic training utilities

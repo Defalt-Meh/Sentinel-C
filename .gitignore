@@ -1,0 +1,69 @@
+# -----------------
+# Python
+# -----------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Framework-C compiled extension
+frameworkc*.so
+*.dll
+*.dylib
+
+# C/C++ build artifacts
+*.o
+*.a
+*.lo
+*.la
+*.obj
+*.lib
+*.exp
+*.pdb
+
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+*.icloud
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated data
+*.npy
+*.npz
+
+# Logs
+logs/
+*.log
+
+# Optional: UI screenshots / docs build artifacts
+docs/*.png
+docs/*.jpg
+docs/*.jpeg
+docs/*.gif
+
+# OS metadata
+Thumbs.db
+ehthumbs.db
